@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/block_attendance"
+            android:clickable="true"
+            android:background="@drawable/custom_button"
+            android:backgroundTint="#ABFAAE"
+            android:layout_width="80dp"
+            android:layout_height="92dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_centerHorizontal="true">
+
+                <RelativeLayout
+                    android:id="@+id/block_icon_booking"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_shadow_menu_attendance">
+
+                    <ImageView
+                        android:id="@+id/icon_booking"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/team" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/block_icon_booking"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:textSize="12.5sp"
+                    android:textColor="#012537"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Điểm danh" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/block_history"
+            android:layout_toEndOf="@id/block_attendance"
+            android:layout_marginLeft="50dp"
+            android:clickable="true"
+            android:background="@drawable/custom_button"
+            android:backgroundTint="#FBDC8B"
+            android:layout_width="82dp"
+            android:layout_height="92dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_centerHorizontal="true">
+
+                <RelativeLayout
+                    android:id="@+id/block_icon_record"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/custom_shadow_menu_history">
+
+                    <ImageView
+                        android:id="@+id/icon_record"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/history" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/block_icon_record"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:textSize="12.5sp"
+                    android:textColor="#012537"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Lịch sử" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

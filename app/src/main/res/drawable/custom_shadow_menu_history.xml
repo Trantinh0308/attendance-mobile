@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background -->
+    <item android:top="55dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFF5DC" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <!-- Shadow -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#00ffffff" /> <!-- Đặt màu trong suốt -->
+            <corners android:radius="10dp" />
+            <size
+                android:width="55dp"
+                android:height="70dp" />
+        </shape>
+    </item>
+</layer-list><!--    #BDEBF1-->
