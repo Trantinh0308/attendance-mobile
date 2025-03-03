@@ -59,10 +59,10 @@ public class ApiClient {
         });
     }
 
-    private static void getRequest(String baseUrl, Map<String, Long> params, final ApiResponseListener listener) {
+    private static void getRequest(String baseUrl, Map<String, Object> params, final ApiResponseListener listener) {
         HttpUrl.Builder urlBuilder = Objects.requireNonNull(HttpUrl.parse(baseUrl)).newBuilder();
         if (params != null && !params.isEmpty()) {
-            for (Map.Entry<String, Long> entry : params.entrySet()) {
+            for (Map.Entry<String, Object> entry : params.entrySet()) {
                 urlBuilder.addQueryParameter(entry.getKey(), String.valueOf(entry.getValue()));
             }
         }
@@ -99,12 +99,16 @@ public class ApiClient {
         postRequest(Constants.ATTENDANCE_URL, attendanceRequest, listener);
     }
 
-    public static void getEmployeeId(Map<String, Long> params,ApiResponseListener listener){
+    public static void getEmployeeId(Map<String, Object> params,ApiResponseListener listener){
         getRequest(Constants.EMPLOYEE_ID_URL,params,listener);
     }
 
-    public static void getAttendanceHistory(ApiResponseListener listener) {
-        getRequest(Constants.ATTENDANCE_URL,null, listener);
+    public static void getNumberAttendance(Map<String, Object> params,ApiResponseListener listener){
+        getRequest(Constants.NUMBER_ATTENDANCE_URL,params,listener);
+    }
+
+    public static void getAttendanceHistory(Map<String, Object> params,ApiResponseListener listener) {
+        getRequest(Constants.ATTENDANCE_URL,params, listener);
     }
 
     public interface ApiResponseListener {

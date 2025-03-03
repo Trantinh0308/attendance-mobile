@@ -13,7 +13,7 @@
         android:layout_height="wrap_content">
 
         <RelativeLayout
-            android:id="@+id/block_attendance"
+            android:id="@+id/block_checkin"
             android:clickable="true"
             android:background="@drawable/custom_button"
             android:backgroundTint="#ABFAAE"
@@ -27,37 +27,84 @@
                 android:layout_centerHorizontal="true">
 
                 <RelativeLayout
-                    android:id="@+id/block_icon_booking"
+                    android:id="@+id/block_icon_checkin"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_shadow_menu_attendance">
 
                     <ImageView
-                        android:id="@+id/icon_booking"
+                        android:id="@+id/icon_checkin"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp"
-                        android:src="@drawable/team" />
+                        android:src="@drawable/checkin" />
                 </RelativeLayout>
 
                 <TextView
+                    android:id="@+id/text_checkIn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/block_icon_booking"
+                    android:layout_below="@id/block_icon_checkin"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="4dp"
                     android:textSize="12.5sp"
                     android:textColor="#012537"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Điểm danh" />
+                    android:text="Check In" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/block_checkout"
+            android:clickable="true"
+            android:layout_marginLeft="50dp"
+            android:layout_toEndOf="@id/block_checkin"
+            android:background="@drawable/custom_button"
+            android:backgroundTint="#D6FAD7"
+            android:layout_width="80dp"
+            android:layout_height="92dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_centerHorizontal="true">
+
+                <RelativeLayout
+                    android:id="@+id/block_icon_checkout"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_shadow_menu_attendance">
+
+                    <ImageView
+                        android:id="@+id/icon_checkout"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/checkout" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/text_checkOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/block_icon_checkout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:textSize="12.5sp"
+                    android:textColor="#012537"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Check Out" />
             </RelativeLayout>
 
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/block_history"
-            android:layout_toEndOf="@id/block_attendance"
+            android:layout_toEndOf="@id/block_checkout"
             android:layout_marginLeft="50dp"
             android:clickable="true"
             android:background="@drawable/custom_button"
